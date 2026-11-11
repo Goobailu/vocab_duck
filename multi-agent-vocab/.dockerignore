@@ -1,0 +1,6 @@
+target/
+*.iml
+.idea/
+application-local.properties
+application-local*.properties
+!application-local.example.properties
