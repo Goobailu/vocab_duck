@@ -195,7 +195,7 @@
 
 <script setup>
 import { ref, reactive } from 'vue'
-import axios from 'axios'
+import api from '../services/api'
 import { BookOpen, GraduationCap } from 'lucide-vue-next'
 import { useTheme } from '../composables/useTheme'
 
@@ -234,7 +234,7 @@ async function handleLogin() {
   }
   loading.value = true
   try {
-    const res = await axios.post('/api/auth/login', {
+    const res = await api.post('/api/auth/login', {
       username: loginForm.username,
       password: loginForm.password
     })
@@ -263,7 +263,7 @@ async function handleRegister() {
   }
   loading.value = true
   try {
-    await axios.post('/api/auth/register', {
+    await api.post('/api/auth/register', {
       username: registerForm.username,
       email: registerForm.email,
       password: registerForm.password,
