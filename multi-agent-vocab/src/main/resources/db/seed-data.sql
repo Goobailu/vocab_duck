@@ -1,7 +1,6 @@
 -- ============================================================
 -- 词库种子数据 (Seed Data) - CET4 补充词汇
 -- ============================================================
-USE vocab_system;
 
 INSERT IGNORE INTO words (word, phonetic, part_of_speech, definition_en, definition_cn, difficulty, frequency_rank, tags, etymology, example_sentences, synonyms, antonyms) VALUES
 ('balance', '/ˈbæləns/', 'noun', 'An even distribution of weight; a state of equilibrium', '平衡；天平；余额', 1, 300, '["cet4"]', '源自古法语balance，来自拉丁语bilanx，bi-表示两个，lanx表示盘子，原指天平的两个盘子', '[{"en": "You need to find a balance between work and leisure.", "cn": "你需要在工作和休闲之间找到平衡。"}, {"en": "She lost her balance and fell.", "cn": "她失去平衡摔倒了。"}]', '["equilibrium", "stability"]', '["imbalance", "instability"]'),
